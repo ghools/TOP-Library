@@ -22,11 +22,19 @@
 
 .cardContainer {
     display: flex;
-    border: 2px solid black;
-    width: 20%;
-    height: 28vh;
     padding: 7px;
     margin: 15px;
+}
+
+.bookCard {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    margin: 15px;
+    padding: 7px;
+    width: 20vw;
+    height: 30vh;
+    overflow: auto;
 }
 
 .cardRow {
@@ -48,6 +56,5 @@
 
 .readBut {
     padding: 2px;
-    margin: 4px;
-    margin-top: 35px;
+    margin: 10px;
 }

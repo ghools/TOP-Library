@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,33 +8,60 @@
     <title>Library App</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="mainContainer">
-    <div class="header">
-        <button class="bookBut">Add a New Book!</button>
-    </div>
-    <div class="cardContainer">
-        <div class="bookCard">
-            <div class="cardRow">
-                <div class="cardDes">Title: </div>
-                <div class="cardInput">The Hobbit</div>
+    <div class="mainContainer">
+        <div class="header">
+            <button class="bookBut">Add a New Book!</button>
+        </div>
+        <div class="cardContainer">
+            <div class="bookCard">
+                <div class="cardRow">
+                    <div class="cardDes">Title: </div>
+                    <div class="cardInput">The Hobbit</div>
+                </div>
+                <div class="cardRow">
+                    <div class="cardDes">Author:</div>
+                    <div class="cardInput">J.R.R Tolkein</div>
+                </div>
+                <div class="cardRow">
+                    <div class="cardDes">Pages:</div>
+                    <div class="cardInput">265</div>
+                </div>
+                <div class="cardRow">
+                    <div class="cardDes">Read?:</div>
+                    <div class="cardInput">False</div>
+                </div>
+                <div class="cardRow">
+                    <button class="readBut">Read Book!</button>
+                    <button class="readBut">Remove From Library</button>
+                </div>
             </div>
-            <div class="cardRow">
-                <div class="cardDes">Author:</div>
-                <div class="cardInput">J.R.R Tolkein</div>
+            <div class="bookCard">
+                <div class="cardRow">
+                    <div class="cardDes">Title: </div>
+                    <div class="cardInput">Goosebumps: A Night in Terror Tower</div>
+                </div>
+                <div class="cardRow">
+                    <div class="cardDes">Author:</div>
+                    <div class="cardInput">R.L. Stine</div>
+                </div>
+                <div class="cardRow">
+                    <div class="cardDes">Pages:</div>
+                    <div class="cardInput">128</div>
+                </div>
+                <div class="cardRow">
+                    <div class="cardDes">Read?:</div>
+                    <div class="cardInput">True</div>
+                </div>
+                <div class="cardRow">
+                    <button class="readBut">Read Book!</button>
+                    <button class="readBut">Remove From Library</button>
+                </div>
             </div>
-            <div class="cardRow">
-                <div class="cardDes">Pages:</div>
-                <div class="cardInput">265</div>
-            </div>
-            <div class="cardRow">
-                <div class="cardDes">Read?:</div>
-                <div class="cardInput">True</div>
-            </div>
-            <button class="readBut">Read Book!</button>
         </div>
     </div>
-</div>    
     <script src="library.js" defer></script>
 </body>
+
 </html>
