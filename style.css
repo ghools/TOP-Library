@@ -1,0 +1,53 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin: 15px;
+    padding: 7px;
+    display: flex;
+    justify-content: end;
+}
+
+.bookBut {
+    padding: 3px;
+}
+
+.cardContainer {
+    display: flex;
+    border: 2px solid black;
+    width: 20%;
+    height: 28vh;
+    padding: 7px;
+    margin: 15px;
+}
+
+.cardRow {
+    display: flex;
+}
+
+.cardDes {
+    font-size: large;
+    font-weight: bold;
+    margin: 4px;
+    padding: 2px;
+}
+
+.cardInput {
+    font-size: large;
+    margin: 4px;
+    padding: 2px;
+}
+
+.readBut {
+    padding: 2px;
+    margin: 4px;
+    margin-top: 35px;
+}
