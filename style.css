@@ -58,3 +58,38 @@
     padding: 2px;
     margin: 10px;
 }
+
+.formContainer {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    height: fit-content;
+    width: 25%;
+    position: fixed;
+    left: 45%;
+    top: 5%;
+    background-color: #e5e5e5;
+}
+
+.formContainer label, .bookRead {
+    padding: 4px;
+    margin: 2px;
+    font-size: larger;
+}
+
+.formContainer input {
+    padding: 4px;
+    margin: 5px;
+}
+
+.formContainer h2 {
+    padding: 7px;
+    margin: 15px;
+}
+
+.radioRead {
+    margin-bottom: 15px;
+}
+
