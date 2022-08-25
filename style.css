@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 .mainContainer {
@@ -66,30 +67,45 @@
     align-items: center;
     border: 2px solid black;
     height: fit-content;
-    width: 25%;
+    width: 40%;
+    height: 75%;
     position: fixed;
-    left: 45%;
+    left: 30%;
     top: 5%;
     background-color: #e5e5e5;
 }
 
 .formContainer label, .bookRead {
     padding: 4px;
-    margin: 2px;
-    font-size: larger;
+    margin: 5px;
+    font-size: x-large;
 }
 
 .formContainer input {
     padding: 4px;
     margin: 5px;
+    width: 40%;
+    height: 10%;
+    font-size: larger;
+    background-color: #fafafa;
 }
 
 .formContainer h2 {
     padding: 7px;
     margin: 15px;
+    font-size: xxx-large;
 }
+
+.formContainer button {
+    padding: 4px;
+    margin: 10px;
+}
+
 
 .radioRead {
     margin-bottom: 15px;
 }
-
+input[type="radio"]{
+    width: 20px;
+    height: 20px;
+    } 
