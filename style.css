@@ -25,6 +25,7 @@
     display: flex;
     padding: 7px;
     margin: 15px;
+    flex-wrap: wrap;
 }
 
 .bookCard {
