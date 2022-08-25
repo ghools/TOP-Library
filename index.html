@@ -28,14 +28,14 @@
                         <input type="number" id="pages" name="pages" placeholder="Number of Pages" required>
                         <div class="bookRead">Have you read the title?</div>
                         <div class="radioRead">
-                            <input type="radio" name="read" id="read" value="true">
+                            <input type="radio" name="read" id="read" value="True">
                             <label for="read">Yes</label>
-                            <input type="radio" name="read" id="read" value="false">
+                            <input type="radio" name="read" id="read" value="False">
                             <label for="read">No</label>
                         </div>
                         <div class="buttons">
-                            <button type="submit" class="submit">Add Book</button>
-                            <button onclick="closeForm()" class="cancel">Cancel</button>
+                            <button type="button" onclick="makeBook()" class="submit">Add Book</button>
+                            <button type="button" onclick="closeForm()" class="cancel">Cancel</button>
                         </div>
                     </form>
                 </div>
