@@ -107,7 +107,12 @@
 .radioRead {
     margin-bottom: 15px;
 }
-input[type="radio"]{
+
+input[type="radio"] {
     width: 20px;
     height: 20px;
     } 
+
+    .butRow {
+        margin-top: auto;
+    }

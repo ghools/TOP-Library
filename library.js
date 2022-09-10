@@ -10,8 +10,7 @@ function Book(title, author, pages, read) {
 }
 
 //Making new Book Example
-const theHobbit = new Book("The Hobbit", "J.R.R. Tolkein", "295", "False");
-
+// const theHobbit = new Book("The Hobbit", "J.R.R. Tolkein", "295", "False");
 
 let myLibrary = [];
 
@@ -23,16 +22,25 @@ function closeForm() {
     document.querySelector(".formContainer").style.display = "none";
 }
 
+//will remove all the dom elements later when building library
 function removeChildren(parent) {
     while (parent.firstChild) {
-        parent.removeChild(parent.firstChild)
+        parent.removeChild(parent.firstChild);
     }
 }
 
+//removes book from array
+// function removeBook(i) {
+//     myLibrary.splice(i, 1);
+//     buildLibrary(myLibrary);
+// }
+
+//Builds the full library, lots of code, but essentially just building a BUNCH of DOM elements and assinging them classes for styling.
 function buildLibrary(myLibrary) {
     const cardContainer = document.querySelector(".cardContainer");
     removeChildren(cardContainer);
     for (let i = 0; i < myLibrary.length; i++) {
+        myLibrary[i].index = i;
         const bookCard = document.createElement("div");
         bookCard.className = "bookCard";
         const titleRow = document.createElement("div");
@@ -80,13 +88,22 @@ function buildLibrary(myLibrary) {
         readRow.appendChild(readCon);
         bookCard.appendChild(readRow);
         const butRow = document.createElement("div");
-        butRow.className = "cardRow";
+        butRow.className = "butRow";
         const readBut = document.createElement("button");
         readBut.className = "readBut";
         readBut.innerHTML = "Read Book!";
         const remBut = document.createElement("button");
         remBut.className = "readBut";
-        remBut.innerHTML = "Remove from Library";
+        remBut.innerHTML = i;
+        remBut.onclick = function(i) {
+            for (let j = 0; j < myLibrary.length; j++) {
+                if (myLibrary[j].index = i) {
+                    myLibrary.splice(i, 1);
+                    buildLibrary(myLibrary);
+                    return;
+                }
+            }
+        };
         butRow.appendChild(readBut);
         butRow.appendChild(remBut);
         bookCard.appendChild(butRow);
@@ -103,7 +120,7 @@ function makeBook() {
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
     let pages = document.getElementById("pages").value;
-    let read = document.getElementById("read").value;
+    let read = document.querySelector('input[name="read"]:checked').value;
     const newBook = new Book(title, author, pages, read);
     addBook(newBook);
     buildLibrary(myLibrary);
