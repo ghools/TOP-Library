@@ -11,14 +11,21 @@
 }
 
 .header {
-    margin: 15px;
-    padding: 7px;
+    padding: 25px;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    background-color: #f4f4f5
+}
+
+.headerTitle {
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-right: auto;
+    margin-left: 5%;
 }
 
 .bookBut {
-    padding: 3px;
+    padding: 5px;
 }
 
 .cardContainer {
@@ -37,6 +44,7 @@
     width: 20vw;
     height: 30vh;
     overflow: auto;
+    background-color: #f4f4f5;
 }
 
 .cardRow {
@@ -113,16 +121,16 @@ input[type="radio"] {
     height: 20px;
     } 
 
-    .butRow {
+.butRow {
         margin-top: auto;
     }
 
-    .bookCard.read {
+.bookCard.read {
         border-left-width: 15px;
         border-left-color: green;
     }
 
-    .readStatus.read {
+.readStatus.read {
         font-weight: bold;
         color: green;
     }
