@@ -57,7 +57,7 @@
 }
 
 .readBut {
-    padding: 2px;
+    padding: 5px;
     margin: 10px;
 }
 
@@ -115,4 +115,34 @@ input[type="radio"] {
 
     .butRow {
         margin-top: auto;
+    }
+
+    .bookCard.read {
+        border-left-width: 15px;
+        border-left-color: green;
+    }
+
+    .readStatus.read {
+        font-weight: bold;
+        color: green;
+    }
+
+    button.read {
+        background-color: green;
+        color: white;
+    }
+
+    .bookCard.notRead {
+        border-left-width: 15px;
+        border-left-color: red;
+    }
+
+    .readStatus.notRead {
+        font-weight: bold;
+        color: red;
+    }
+
+    button.notRead {
+        background-color: red;
+        color: white;
     }

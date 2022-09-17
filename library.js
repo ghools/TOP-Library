@@ -29,12 +29,6 @@ function removeChildren(parent) {
     }
 }
 
-//removes book from array
-// function removeBook(i) {
-//     myLibrary.splice(i, 1);
-//     buildLibrary(myLibrary);
-// }
-
 //Builds the full library, lots of code, but essentially just building a BUNCH of DOM elements and assinging them classes for styling.
 function buildLibrary(myLibrary) {
     const cardContainer = document.querySelector(".cardContainer");
@@ -83,6 +77,7 @@ function buildLibrary(myLibrary) {
         readDes.innerHTML = "Read the Book?:";
         const readCon = document.createElement("div");
         readCon.className = "cardInput";
+        readCon.classList.add("readStatus");
         readCon.innerHTML = myLibrary[i].read;
         readRow.appendChild(readDes);
         readRow.appendChild(readCon);
@@ -92,22 +87,49 @@ function buildLibrary(myLibrary) {
         const readBut = document.createElement("button");
         readBut.className = "readBut";
         readBut.innerHTML = "Read Book!";
+        readBut.addEventListener("click", (event) => {
+            for (let j = 0; j < myLibrary.length; j++) {
+                if (myLibrary[j].index === i) {
+                    if (myLibrary[j].read === "True") {
+                        myLibrary[j].read = "False";
+                        buildLibrary(myLibrary);
+                        return;
+                    }
+                    if (myLibrary[j].read === "False") {
+                        myLibrary[j].read = "True";
+                        buildLibrary(myLibrary);
+                        return;
+                    }
+                }
+            }
+        });
+
         const remBut = document.createElement("button");
         remBut.className = "readBut";
-        remBut.innerHTML = i;
-        remBut.onclick = function(i) {
+        remBut.innerHTML = "Remove";
+        remBut.addEventListener("click", (event) => {
             for (let j = 0; j < myLibrary.length; j++) {
-                if (myLibrary[j].index = i) {
-                    myLibrary.splice(i, 1);
+                if (myLibrary[j].index === i) {
+                    myLibrary.splice(j, 1);
                     buildLibrary(myLibrary);
                     return;
                 }
             }
-        };
+        });
         butRow.appendChild(readBut);
         butRow.appendChild(remBut);
         bookCard.appendChild(butRow);
         cardContainer.appendChild(bookCard);
+        if (myLibrary[i].read === "True") {
+            bookCard.classList.add("read");
+            readBut.classList.add("read");
+            readCon.classList.add("read");
+        }
+        if (myLibrary[i].read === "False") {
+            bookCard.classList.add("notRead");
+            readBut.classList.add("notRead");
+            readCon.classList.add("notRead");
+        }
     }
     return;
 }
