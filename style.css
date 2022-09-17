@@ -140,17 +140,25 @@ input[type="radio"] {
         color: white;
     }
 
+    button.read:hover {
+        background-color: rgb(2, 176, 2);
+    }
+
     .bookCard.notRead {
         border-left-width: 15px;
-        border-left-color: red;
+        border-left-color: rgb(200, 2, 2);
     }
 
     .readStatus.notRead {
         font-weight: bold;
-        color: red;
+        color: rgb(200, 2, 2);
     }
 
     button.notRead {
-        background-color: red;
+        background-color: rgb(200, 2, 2);
         color: white;
+    }
+
+    button.notRead:hover {
+        background-color: red;
     }
